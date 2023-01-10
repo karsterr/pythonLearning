@@ -114,3 +114,41 @@ v = " Cheat"
 y = "sheet"
 z = "."
 print(w + v + y + z)
+
+print("Global variables can be used by everyone, both inside of functions and outside.")
+
+name = "Efe Can Kara"
+def pmn():
+    print("My name is " + name)
+
+pmn()
+
+print("If you create a variable with the same name inside a function, this variable will be local, and can only be used inside the function. The global variable with the same name will remain as it was, global and with the original value.")
+
+name = "Efe Can Kara"
+def printMyName():
+    name = "John Doe"
+    print("My name is " + name)
+
+printMyName()
+print(name)
+
+print("To create a global variable inside a function, you can use the global keyword.")
+
+def globalVariable():
+  global x
+  x = "fantastic"
+  print(x)
+
+globalVariable()
+print("Python is " + x)
+
+print("Also, use the global keyword if you want to change a global variable inside a function.")
+
+x = "awesome"
+def myfunc():
+    global x
+    x = "fantastic"
+
+myfunc()
+print("Python is " + x)
